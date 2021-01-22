@@ -19,7 +19,7 @@ def get_help_message():
         message += "%s: %s\t" % (key, morse_code[key])
         if counter % 5 == 0:
             message += "\n"
-    return message 
+    return message
 
 
 def is_help_command(user_input:str):
