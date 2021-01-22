@@ -72,7 +72,7 @@ def decoding_sentence(morse_sentence):
 
 def encoding_sentence(english_sentence):
     res = []
-    for word in english_sentence.split():
+    for word in get_cleaned_english_sentence(english_sentence).split():
       tmp = ''
       for w in word:
         tmp += encoding_character(w)+' '
@@ -90,7 +90,7 @@ def main():
         print(get_help_message())
       else:
         if is_validated_english_sentence(input_):
-          print(encoding_sentence(get_cleaned_english_sentence(input_)))
+          print(encoding_sentence(input_))
         elif is_validated_morse_code(input_):
           print(decoding_sentence(input_))
         else:
